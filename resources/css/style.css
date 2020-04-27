@@ -4,57 +4,60 @@
     box-sizing: border-box;
 }
 
+/**
+*   Minimal BG Color: #e5e5e5;
+*   Base Color: #546de5
+*   Base Darker Variant: #3754e1
+*   Base Lighter Variant: #7186e9
+*/
+
 html {
-    background-color: #e5e5e5;
+    background-color: #ebedf0;
     color: #333;
     font-family: 'Montserrat', 'sans-serif';
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     text-rendering: optimizeLegibility;
 }
 
-.row {
-    background-color: aqua;
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-header {
-
-    background-size: cover;
-    background-position: center;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5rem;
     height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.project-name {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+nav ul li {
+    list-style-type: none;
+    color: #333;
+    background-color: #e3e6e9;
+    font-size: 25px;
+    margin: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    -moz-box-shadow:    inset 0 0 2px #bac2ca;
+    -webkit-box-shadow: inset 0 0 2px #bac2ca;
+     box-shadow:         inset 0 0 2px #bac2ca;
 }
 
-h1 {
-    margin: 0;
-    font-size: 400%;
+nav ul li:active {
+    background-color: #fff;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    border: solid #333 1px;
-    border-radius: 200px;
+nav ul li:hover {
+    background-color: #f6f6f6;
+}
+
+a {
     text-decoration: none;
     color: #333;
 }
 
-.btn-full {
-    background-color: #e5e5e5;
-    border: 1px solid #333;
-}
 
-.btn-ghost {
-    border: 1px solid #333;
-    background-color: cornflowerblue;
-}
+
+
