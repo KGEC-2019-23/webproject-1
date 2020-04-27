@@ -1,7 +1,8 @@
 # Web Project - 1
 
-- TODO
+- TODO 
 - Pomodoro
 - Flash Cards
 - Planner
 - Activity Tracker
+- Quick Notes
