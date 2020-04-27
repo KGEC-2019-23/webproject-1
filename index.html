@@ -1,29 +1,31 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web app</title>
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" >
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">some logo</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" onclick="showNav()" />
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <ul class="navMenu">
+            <li><a href="/">Pomodoro</a></li>
+            <li><a href="/">Planner</a></li>
+            <li><a href="/">Activity Tracker</a></li>
+            <li><a href="todo.html">Todo List</a></li>
+            <li><a href="/">Quick Notes</a></li>
+        </ul>
         
-    <head>
-        <title>TODO</title>
-
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" >
-        
-    </head>
-
-    <body>
-        <header>
-            <div class="project-name">
-                <h1>Name. <br>
-                Cool Description.</h1>
-            
-                <a class="btn btn-full" href="#">Button1</a>
-                <a class="btn btn-ghost" href="#">Button2</a>
-
-            </div>
-        </header>    
-
-    </body>
-
+    </header>
+    <script src="index.js"></script>
+</body>
 </html>

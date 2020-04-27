@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+    transition: all .2s ease-out;
+}
+html {
+    background-color: #e5e5e5;
+    color: #333;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 20px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
