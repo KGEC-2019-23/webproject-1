@@ -8,7 +8,8 @@ a{
     position:fixed;
     width:100%;
     z-index:3;
-    max-height: 10%;
+    max-height:auto;
+    transition: max-height 0.5s ease-out;
 }
 .header .menu-btn{
     display:none;
@@ -55,6 +56,7 @@ a{
     /*-nav btn animation-*/
     .logo{
         transition: color 0.8 ease-out;
+        background-color: #fff;
     }
     .header .menu-icon{
         padding: 28px 20px;
