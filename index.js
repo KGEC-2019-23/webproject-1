@@ -16,7 +16,7 @@ function showNav(){
         document.getElementsByClassName("header")[0].style.transitionProperty="background-color, max-height";
         document.getElementsByClassName("header")[0].style.transitionDuration="2s, 0.5s";
         document.getElementsByClassName("header")[0].style.transionTimingFunction="ease-out";
-        document.getElementsByClassName("header")[0].style.maxHeight="9%";
+        document.getElementsByClassName("header")[0].style.maxHeight="auto";
         document.getElementsByClassName("logo")[0].style.color="black";
         
     }
