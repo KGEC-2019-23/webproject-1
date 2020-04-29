@@ -12,3 +12,12 @@ html {
     font-weight: 400;
     text-rendering: optimizeLegibility;
 }
+.icon{
+    max-width: 50px;
+    float: left;
+}
+@media only screen and (max-width:1110px){
+    .icon{
+        display: none;
+    }
+}

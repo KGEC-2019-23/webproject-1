@@ -1,4 +1,6 @@
+
 window.onload=function load(){
+    document.getElementsByClassName("navMenu")[0].style.right="-195px";
     if(performance.navigation.type == 2){
         document.getElementsByClassName("navMenu")[0].style.height="0";
         window.location.reload(false);
@@ -25,4 +27,13 @@ function showNav(){
         
     }
 
+}
+
+function showPan(){
+    if(document.getElementsByClassName("navMenu")[0].style.right=="-195px"){
+        document.getElementsByClassName("navMenu")[0].style.right="0";
+    }
+    else{
+        document.getElementsByClassName("navMenu")[0].style.right="-195px"
+    }
 }
