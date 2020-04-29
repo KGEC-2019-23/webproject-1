@@ -14,12 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" >
 </head>
 <body>
-    <header class="header">
-        <a href="/" class="logo">some logo</a>
+    <header id="header">
+        <a href="/" class="logo"><p>some logo</p></a>
         <input class="menu-btn" type="checkbox" id="menu-btn" onclick="showNav()" />
         <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-        <ul class="navMenu">
+        <ul id="navMenu">
             <span class="desktop"><li onclick="showPan()"><a><img src="resources/img/info.svg" class="icon"/><p class="options">Menu</p></a></li></span>
+            <li><a href=""><img src="resources/img/home.svg" class="icon"/><p class="options">Home</p></a></li>
             <li><a href=""><img src="resources/img/pomodoro.svg" class="icon"/><p class="options">Pomodoro</p></a></li>
             <li><a href="/"><img src="resources/img/planner.svg" class="icon"/><p class="options">Planner</p></a></li>
             <li><a href="/"><img src="resources/img/activity.svg" class="icon"/><p class="options">Activity Tracker</p></a></li>

@@ -2,20 +2,17 @@ a{
     color:#000;
 }
 
-.header{
-   
-    background-color:#fff;
-    box-shadow:1px 1px 4px 0 rgba(0,0,0,.1);
+#header{
     position:fixed;
+    height:3.5em ;
     width:100%;
     z-index:3;
-    height:auto;
     transition: max-height 0.5s ease-out;
 }
-.header .menu-btn{
+#header .menu-btn{
     display:none;
 }
-.header ul{
+#header ul{
     margin:0;
     padding:0;
     list-style:none;
@@ -23,23 +20,23 @@ a{
     background-color:#fff;
 }
 
-.header ul a{
+#header ul a{
     display:block;
     padding:20px;
     text-decoration:none;
 }
 
-.header ul a:hover{
+#header ul a:hover{
    background-color:rgb(17,134,230); 
    color:#fff;
 }
-.header .navMenu li{
+#header #navMenu li{
     width: 100%;
-    height: 20%;
+    height: 14.285%;
     display: block;
     float:left;
 }
-.header li a{
+#header li a{
     position: relative;
     height: 100%;
     display: block;
@@ -48,19 +45,25 @@ a{
 }
 .options{
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 37%;
+    left: 30%;
 }
-.header .logo{
+.logo{
+    color: #fff;
+    text-decoration: none;
     float:left;
     display:block;
     font-size:2em;
     padding:10px 20px;
 }
-.header .navMenu{
+#header #navMenu{
+    border-top-left-radius:5px ;
+    border-bottom-left-radius:5px ;
+    border-left:5px solid rgb(17, 134, 230) ;
+    box-shadow: 0px 0px 10px 4px rgb(0,0,0,.9);
     position: fixed;
     top: 0px;
-    right:-195px;
+    right:-230px;
     height: 100%;
     width: 300px;
     float: right;
@@ -68,29 +71,43 @@ a{
 }
 .icon {
     position: absolute;
-    top: 25%;
+    top: 27%;
+    left: 5%;
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:700px) and (orientation:portrait){
     .desktop{
         display: none;
     }
-    .header{
+    #header{
+        border-bottom:5px solid rgb(17, 134, 230) ;
+        box-shadow: 0px 0px 10px 4px rgb(0,0,0,.9);
+        background-color: #fff;
         height: 3.5em;
+        
     }
     .logo{
-        transition: color 0.8 ease-out;
+        color: #000;
         max-height: 100%;
+        height: fit-content;
+        float:left;
+        display:block;
+        font-size:2em;
+        padding:10px 20px;
+        text-decoration: none;
+    }
+    .logo p{
+        font-size: 80%;
     }
     /*-nav btn animation-*/
-    .header .menu-icon{
+    #header .menu-icon{
         padding: 28px 20px;
         position:relative;
         float:right;
         cursor: pointer;
     }
     
-    .header .menu-icon .nav-icon{
+    #header .menu-icon .nav-icon{
         float: right;
         background:#333;
         display:block;
@@ -100,7 +117,7 @@ a{
         transition:background .2s ease-out;
     }
     
-    .header .menu-icon .nav-icon:before{
+    #header .menu-icon .nav-icon:before{
         background:#333;
         content:"";
         display:block;
@@ -112,7 +129,7 @@ a{
     
     }
     
-    .header .menu-icon .nav-icon:after{
+    #header .menu-icon .nav-icon:after{
         background:#333;
         content:"";
         display:block;
@@ -124,37 +141,38 @@ a{
     
     }
     
-    .header .menu-btn{
+    #header .menu-btn{
         display:none;
     }
     
-    .header .menu-btn:checked ~ .navMenu{
+    #header .menu-btn:checked ~ #navMenu{
         height:100%;
         background-color:rgb(17, 134, 230);
         transition-duration: 0.2s, 0.2s;
     }
-    .header .menu-btn:checked ~ .header{
+    #header .menu-btn:checked ~ #header{
         height:100%;
     }
     
-    .header .menu-btn:checked ~ .menu-icon .nav-icon{
+    #header .menu-btn:checked ~ .menu-icon .nav-icon{
         background:transparent;
     }
-    .header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    #header .menu-btn:checked ~ .menu-icon .nav-icon:before{
         transform: rotate(-45deg);
         background: #fff;
         top:0;
     }
-    .header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    #header .menu-btn:checked ~ .menu-icon .nav-icon:after{
         transform: rotate(45deg);
         background: #fff;
         top:0;
     }
     /*nav bar*/
-    .header .navMenu{
+    #header #navMenu{
         position: relative;
         right: 0;
         left: 0;
+        box-shadow: 0 0 0 0 rgba(0,0,0);
         background-color: #fff;
         width: 100%;
         height: 0;
@@ -163,41 +181,42 @@ a{
        transition-timing-function: ease-out;
     }
     
-    .header .navMenu li{
+    #header #navMenu li{
         width: 100%;
         height: 100px;
         text-align: center;
         display: block;
     }
-    .header li a{
+    #header li a{
         display: block;
         padding:20px 30px;
     }
-    .header ul a{
+    #header ul a{
         color: #fff;
         display:block;
         padding:20px;
         border-right:0px solid #aaa;
         text-decoration:none;
     }
-    .header ul a:hover{ 
+    #header ul a:hover{ 
         color:rgba(0,0,0);
      }
-    .header .logo{
-        height: fit-content;
-        float:left;
-        display:block;
-        font-size:2em;
-        padding:10px 20px;
-        text-decoration: none;
-    }
     .options{
         position: relative;
         top: 0px;
         left: 0px;
     }
 }
+@media only screen and (max-width:700px) and (orientation:landscape){
+    #header ul a{
+        color: rgb(17, 134, 230);
+    }
+    #header ul a:hover{ 
+        background-color: rgba(0, 0, 0, 0);
+        color: rgb(17,134,230);
+     }
 
+}
 
 
    
