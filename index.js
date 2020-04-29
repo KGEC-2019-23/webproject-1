@@ -1,28 +1,28 @@
 
 window.onload=function load(){
-    document.getElementsByClassName("navMenu")[0].style.right="-195px";
+    document.getElementById("navMenu").style.right="-230px";
     if(performance.navigation.type == 2){
-        document.getElementsByClassName("navMenu")[0].style.height="0";
+        document.getElementById("navMenu").style.height="0";
         window.location.reload(false);
      }
 }
 function showNav(){
         if(document.getElementById("menu-btn").checked==true){
-            document.getElementsByClassName("navMenu")[0].style.height="100%";    
-        document.getElementsByClassName("header")[0].style.backgroundColor="rgb(17, 134, 230)";
-        document.getElementsByClassName("header")[0].style.transitionProperty="background-color, height";
-        document.getElementsByClassName("header")[0].style.transitionDuration="0.2s, 0.5s";
-        document.getElementsByClassName("header")[0].style.transionTimingFunction="ease-out";
-        document.getElementsByClassName("header")[0].style.height="100%";
+            document.getElementById("navMenu").style.height="100%";    
+        document.getElementById("header").style.backgroundColor="rgb(17, 134, 230)";
+        document.getElementById("header").style.transitionProperty="background-color, height";
+        document.getElementById("header").style.transitionDuration="0.2s, 0.5s";
+        document.getElementById("header").style.transionTimingFunction="ease-out";
+        document.getElementById("header").style.height="100%";
         document.getElementsByClassName("logo")[0].style.color="#fff";
     }
     else if(document.getElementById("menu-btn").checked==false){
-        document.getElementsByClassName("navMenu")[0].style.height="0";    
-        document.getElementsByClassName("header")[0].style.backgroundColor="#fff";    
-        document.getElementsByClassName("header")[0].style.transitionProperty="background-color, height";
-        document.getElementsByClassName("header")[0].style.transitionDuration="0.8s, 0.5s";
-        document.getElementsByClassName("header")[0].style.transionTimingFunction="ease-out";
-        document.getElementsByClassName("header")[0].style.height="3.5em";
+        document.getElementById("navMenu").style.height="0";    
+        document.getElementById("header").style.backgroundColor="#fff";    
+        document.getElementById("header").style.transitionProperty="background-color, height";
+        document.getElementById("header").style.transitionDuration="0.8s, 0.5s";
+        document.getElementById("header").style.transionTimingFunction="ease-out";
+        document.getElementById("header").style.height="3.5em";
         document.getElementsByClassName("logo")[0].style.color="black";
         
     }
@@ -30,10 +30,10 @@ function showNav(){
 }
 
 function showPan(){
-    if(document.getElementsByClassName("navMenu")[0].style.right=="-195px"){
-        document.getElementsByClassName("navMenu")[0].style.right="0";
+    if(document.getElementById("navMenu").style.right=="-230px"){
+        document.getElementById("navMenu").style.right="0";
     }
     else{
-        document.getElementsByClassName("navMenu")[0].style.right="-195px"
+        document.getElementById("navMenu").style.right="-230px"
     }
 }
