@@ -1,1 +1,0 @@
-theme.css contains styles common to all pages in the project
