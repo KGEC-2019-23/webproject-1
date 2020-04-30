@@ -20,23 +20,52 @@
         <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
         <ul id="navMenu">
             <span class="desktop"><li onclick="showPan()"><a><img src="resources/img/info.svg" class="icon"/><p class="options">Menu</p></a></li></span>
-            <li><a href=""><img src="resources/img/home.svg" class="icon"/><p class="options">Home</p></a></li>
-            <li><a href=""><img src="resources/img/pomodoro.svg" class="icon"/><p class="options">Pomodoro</p></a></li>
-            <li><a href="/"><img src="resources/img/planner.svg" class="icon"/><p class="options">Planner</p></a></li>
-            <li><a href="/"><img src="resources/img/activity.svg" class="icon"/><p class="options">Activity Tracker</p></a></li>
-            <li><a href="todo.html"><img src="resources/img/todo.svg" class="icon"/><p class="options">Todo List</p></a></li>
-            <li><a href="/"><img src="resources/img/quick.svg" class="icon"/><p class="options">Quick Notes</p></a></li>
-        </ul>    
+            <li><a href="#home"><img src="resources/img/home.svg" class="icon"/><p class="options">Home</p></a></li>
+            <li><a href="#time"><img src="resources/img/pomodoro.svg" class="icon"/><p class="options">Pomodoro</p></a></li>
+            <li><a href="#plan"><img src="resources/img/planner.svg" class="icon"/><p class="options">Planner</p></a></li>
+            <li><a href="#work"><img src="resources/img/activity.svg" class="icon"/><p class="options">Activity Tracker</p></a></li>
+            <li><a href="#res"><img src="resources/img/todo.svg" class="icon"/><p class="options">Todo List</p></a></li>
+            <li><a href="#to"><img src="resources/img/quick.svg" class="icon"/><p class="options">Quick Notes</p></a></li>
+        </ul>
+        
     </header>
-    <div id="dashboard">
-        <div class="dashDiv" id="planner">planner</div>
-        <div class="dashDiv" id="calender">calender</div>
-        <div class="dashDiv" id="quickNotes">notes</div>
-        <div class="dashDiv" id="graphics">graphs</div>
-        <div class="dashDiv" id="overview">overview</div>
-        <div class="dashDiv" id="diary">diary</div>
+
+    
+
+    <div class="dashboard">
+        <span class="anchor" id="time"></span>
+        Dashboard
     </div>
-    <div id="footer">footer</div>
+
+    
+    <div class="timer">        
+        <span class="anchor" id="time"></span>
+        Timer        
+    </div>
+
+    <div class="planner">
+        <span class="anchor" id="plan"></span>
+        Planner
+    </div>
+
+    <div class="stats">
+        <span class="anchor" id="work"></span>
+        Stats
+    </div>
+
+    <div class="flash">
+        <span class="anchor" id="res"></span>
+        Flash Cards
+    </div>
+
+    <div class="todo">
+        <span class="anchor" id="to"></span>
+        TODO
+    </div>
+    
+    <footer>
+        Links to socials
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>

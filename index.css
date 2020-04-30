@@ -3,7 +3,9 @@ a{
 }
 
 #header{
-    height:10%;
+    position:fixed;
+    top: 0;
+    height:3.5em ;
     width:100%;
     z-index:3;
     transition: max-height 0.5s ease-out;
@@ -26,7 +28,7 @@ a{
 }
 
 #header ul a:hover{
-   background-color:rgb(17,134,230); 
+   background-color: #e0e7e9;
    color:#fff;
 }
 #header #navMenu li{
@@ -58,7 +60,7 @@ a{
 #header #navMenu{
     border-top-left-radius:5px ;
     border-bottom-left-radius:5px ;
-    border-left:5px solid rgb(17, 134, 230) ;
+    border-left:5px solid #808080 ;
     box-shadow: 0px 0px 10px 4px rgb(0,0,0,.9);
     position: fixed;
     top: 0px;
@@ -138,7 +140,7 @@ a{
         display: none;
     }
     #header{
-        border-bottom:5px solid rgb(17, 134, 230) ;
+        border-bottom:5px solid #808080 ;
         box-shadow: 0px 0px 10px 4px rgb(0,0,0,.9);
         background-color: #fff;
         height: 3.5em;
@@ -205,7 +207,7 @@ a{
     
     #header .menu-btn:checked ~ #navMenu{
         height:100%;
-        background-color:rgb(17, 134, 230);
+        background-color:#808080;
         transition-duration: 0.2s, 0.2s;
     }
     #header .menu-btn:checked ~ #header{
@@ -265,6 +267,48 @@ a{
         left: 0px;
     }
 }
+
+.dashboard, .timer, .planner, .stats, .flash, .todo {
+    display: block;
+    margin: 15vh 6vw;
+    height: 80vh;
+    width: 80vw;
+    background-color: #1e2025;
+    border-radius: 1rem;
+    padding: 30px;
+    -webkit-box-shadow: 0px -1px 23px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 23px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 23px -3px rgba(0,0,0,0.75);
+}
+/*
+.timer {
+    margin: 12vh;    
+}
+
+.planner {
+    margin: 114% 12vh;
+}
+
+.stats {
+   margin: 171% 12vh;
+}
+
+.flash {
+    margin: 228% 12vh;
+}
+
+.todo {
+    margin: 285% 12vh;    
+}
+*/
+
+footer {
+    display: block;
+    bottom: 0;
+    top: auto;
+    color: #aaa;
+    height: 10%;
+}
 @media only screen and (max-width:700px) and (orientation:landscape){
     #header ul a{
         color: rgb(17, 134, 230);
@@ -277,6 +321,10 @@ a{
          width: 8%;
      }
 
+}
+
+#time:active .timer{
+    z-index: 1;
 }
 
 

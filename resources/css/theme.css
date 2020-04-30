@@ -5,7 +5,7 @@
     transition: all .2s ease-out;
 }
 html {
-    background-color: rgb(139, 194, 238);
+    background-color: #1a1c20;
     color: #333;
     font-family: 'Montserrat', 'sans-serif';
     font-size: 20px;
