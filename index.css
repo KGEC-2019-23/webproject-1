@@ -3,8 +3,7 @@ a{
 }
 
 #header{
-    position:fixed;
-    height:3.5em ;
+    height:10%;
     width:100%;
     z-index:3;
     transition: max-height 0.5s ease-out;
@@ -68,13 +67,72 @@ a{
     width: 300px;
     float: right;
     transition: right 0.8s ease-out;
+    z-index: 5;
 }
 .icon {
     position: absolute;
     top: 27%;
     left: 5%;
 }
-
+/*=============================================================================*/
+/*body start*/
+/*=============================================================================*/
+#dashboard{
+    position:absolute;
+    top: 10%;
+    width: 95%;
+    height: 300%;
+}
+#planner{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 16%;
+    height: 66%;
+}
+#calender{
+    position: absolute;
+    top: 0%;
+    right:0;
+    width: 28%;
+    height:18%;
+}
+#quickNotes{
+    position: absolute;
+    top:19%;
+    right:0;
+    width:28%;
+    height: 47%;
+}
+#graphics{
+    position: absolute;
+    top: 0%;
+    left:18%;
+    width: 50%;
+    height: 28%;
+}
+#overview{
+    position: absolute;
+    top: 29%;
+    left:18%;
+    width: 50%;
+    height: 37%;
+}
+#diary{
+    position: absolute;
+    top: 67%;
+    width: 98%;
+    height: 31.5%;
+}
+#footer{
+    background-color: rgb(16, 62, 100);
+    color: #fff;
+    position: absolute;
+    top: 310%;
+    width: 96%;
+    height:30%;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.9);
+}
 @media only screen and (max-width:700px) and (orientation:portrait){
     .desktop{
         display: none;
@@ -214,6 +272,9 @@ a{
     #header ul a:hover{ 
         background-color: rgba(0, 0, 0, 0);
         color: rgb(17,134,230);
+     }
+     .icon{
+         width: 8%;
      }
 
 }

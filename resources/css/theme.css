@@ -21,3 +21,10 @@ html {
         display: none;
     }
 }
+.dashDiv{
+    background-color: #fff;
+    box-shadow: 0 0 20px 4px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0, 0, 0, 0.281);
+    border-radius: 5px;
+    margin: 1%;
+}
