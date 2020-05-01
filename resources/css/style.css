@@ -263,8 +263,10 @@ a {
         display: none;
     }
 }
-.licon{
+ion-icon {
+    font-size: 30px;
     width: 30px;
+    color: rgb(236, 237, 243);
 }
 #logoMenu li a{
     position: absolute;
@@ -275,7 +277,7 @@ a {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #222429;
     box-shadow: 2px 2px 10px 10px rgba(0,0,0,0.75);
 }
 .logo-icon{
@@ -290,98 +292,80 @@ a {
 /*---this is temporily solving of a bug*/
 #a1{
     transform-origin: center;
-    transform: rotate(-0deg);
+    transform: rotate(-55deg);
     top: -20%;
     left: -40%;
 }
 #a2{
     transform-origin: center;
-    transform: rotate(-60deg);
+    transform: rotate(-75deg);
     top: -13%;
     left: -60%;
 }
 #a3{
     transform-origin: center;
-    transform: rotate(-120deg);
+    transform: rotate(-95deg);
     top: 15%;
     left: -60%;
 }
 #a4{
     transform-origin: center;
-    transform: rotate(-180deg);
+    transform: rotate(-115deg);
     top: 20%;
     left: -40%;
-}
-#a5{
-    transform-origin: center;
-    transform: rotate(-240deg);
-    top: 8%;
-    left: -20%;
-}
-#a6{
-    transform-origin: center;
-    transform: rotate(-300deg);
-    top: -10%;
-    left: -20%;
 }
 /*---this is temporily solving of a bug end*/
 #logoDiv{
     position: fixed;
-    top: 70px;
-    left: 70px;
-    height: 150px;
-    width:150px;
+    top: 10px;
+    left: 10px;
+    height: 120px;
+    width:120px;
     border-radius: 50%;
-    background-color:#fff;
+    background-color:transparent;
 }
 #logoMenu li{
     transition: all 0.5s ease-in-out;
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: calc((100% - 45px)/2);
+    left: calc((100% - 45px)/2);
     height: 50px;
     width: 50px;
-    text-align: center;
+    text-align: justify;
     border-radius: 50%;
-    background-color: rgb(17, 134, 230);
+    background-color: transparent;
     z-index: -1;
 }
 #logo{
     z-index: 1;
 }
 #logo-btn:checked~ #logoMenu li{
-    transform-origin:105px 105px ;
-    top: -30px;
-    left: -30px;
+    transform-origin:100px 100px ;
+    top: -40px;
+    left: -40px;
 }
 
 #logo-btn:checked~#logoMenu li:nth-child(1){
-    transform: rotate(0deg);
+    transform: rotate(110deg);
 }
 #logo-btn:checked~#logoMenu li:nth-child(2){
-    transform: rotate(60deg);
+    transform: rotate(150deg);
 
 }
 #logo-btn:checked~#logoMenu li:nth-child(3){
     
-    transform: rotate(120deg);
+    transform: rotate(190deg);
 }
 #logo-btn:checked~#logoMenu li:nth-child(4){
     
-    transform: rotate(180deg);
+    transform: rotate(230deg);
 }
-#logo-btn:checked~#logoMenu li:nth-child(5){
-   
-    transform: rotate(240deg);
-}
-#logo-btn:checked~#logoMenu li:nth-child(6){
-    
-    transform: rotate(300deg);
-}
-#logoMenu li a:hover{
+#logoMenu li a:hover {
     background-color: transparent;
-    border-radius: 50%;
 }
-#logoMenu li:hover{
-    background-color:rgb(17, 134, 230,0.5);
+
+#logoDiv img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
 }
