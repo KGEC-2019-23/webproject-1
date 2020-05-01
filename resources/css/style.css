@@ -103,6 +103,9 @@ a {
 }
 
 @media only screen and (max-width:700px) and (orientation:portrait){
+    #logoDiv{
+        display: none;
+    }
     .desktop{
         display: none;
     }
@@ -234,7 +237,6 @@ a {
         left: 0px;
     }
 }
-
 .dashboard, .timer, .plan, .stats, .flash, .todo {
     display: block;
     margin: 13vh 6vw 0 6vw;
@@ -257,5 +259,129 @@ a {
         background-color: rgba(0, 0, 0, 0);
         color: rgb(17,134,230);
      }
+     #logoDiv{
+        display: none;
+    }
+}
+.licon{
+    width: 30px;
+}
+#logoMenu li a{
+    position: absolute;
+}
+#logocheck{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 10px rgba(0,0,0,0.75);
+}
+.logo-icon{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+#logo-btn{
+    display: none;
+}
+/*---this is temporily solving of a bug*/
+#a1{
+    transform-origin: center;
+    transform: rotate(-0deg);
+    top: -20%;
+    left: -40%;
+}
+#a2{
+    transform-origin: center;
+    transform: rotate(-60deg);
+    top: -13%;
+    left: -60%;
+}
+#a3{
+    transform-origin: center;
+    transform: rotate(-120deg);
+    top: 15%;
+    left: -60%;
+}
+#a4{
+    transform-origin: center;
+    transform: rotate(-180deg);
+    top: 20%;
+    left: -40%;
+}
+#a5{
+    transform-origin: center;
+    transform: rotate(-240deg);
+    top: 8%;
+    left: -20%;
+}
+#a6{
+    transform-origin: center;
+    transform: rotate(-300deg);
+    top: -10%;
+    left: -20%;
+}
+/*---this is temporily solving of a bug end*/
+#logoDiv{
+    position: fixed;
+    top: 70px;
+    left: 70px;
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+    background-color:#fff;
+}
+#logoMenu li{
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(17, 134, 230);
+    z-index: -1;
+}
+#logo{
+    z-index: 1;
+}
+#logo-btn:checked~ #logoMenu li{
+    transform-origin:105px 105px ;
+    top: -30px;
+    left: -30px;
+}
 
+#logo-btn:checked~#logoMenu li:nth-child(1){
+    transform: rotate(0deg);
+}
+#logo-btn:checked~#logoMenu li:nth-child(2){
+    transform: rotate(60deg);
+
+}
+#logo-btn:checked~#logoMenu li:nth-child(3){
+    
+    transform: rotate(120deg);
+}
+#logo-btn:checked~#logoMenu li:nth-child(4){
+    
+    transform: rotate(180deg);
+}
+#logo-btn:checked~#logoMenu li:nth-child(5){
+   
+    transform: rotate(240deg);
+}
+#logo-btn:checked~#logoMenu li:nth-child(6){
+    
+    transform: rotate(300deg);
+}
+#logoMenu li a:hover{
+    background-color: transparent;
+    border-radius: 50%;
+}
+#logoMenu li:hover{
+    background-color:rgb(17, 134, 230,0.5);
 }

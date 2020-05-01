@@ -13,7 +13,23 @@
 </head>
 <body>
     <header id="header">
-        <a href="/" class="logo"><p>some logo</p></a>
+        
+        <div id="logoDiv">
+            
+                <input class="logo-btn" type="checkbox" id="logo-btn"/>
+                <label class="logo-icon" for="logo-btn"><div id="logocheck"></div></label>
+            
+            <ul id="logoMenu">
+                <li><a href="#" id="a1"><img src="resources/img/home.svg" class="licon" id="a1"/></a></li>
+                <li><a href="" id="a2"><img src="resources/img/pomodoro.svg" class="licon" id="a1"/></a></li>
+                <li><a href="" id="a3"><img src="resources/img/planner.svg" class="licon" id="a1"/></a></li>
+                <li><a href="" id="a4"><img src="resources/img/activity.svg" class="licon" id="a1"/></a></li>
+                <li><a href="" id="a5"><img src="resources/img/todo.svg" class="licon" id="a1"/></a></li>
+                <li><a href="" id="a6"><img src="resources/img/quick.svg" class="licon" id="a1"/></a></li>
+            </ul>
+        </div>
+        
+        
         <input class="menu-btn" type="checkbox" id="menu-btn" onclick="showNav()" />
         <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
         <ul id="navMenu">
