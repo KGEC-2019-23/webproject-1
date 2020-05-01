@@ -1,60 +1,387 @@
+
 * {
     margin: 0;
     padding: 0;    
     box-sizing: border-box;
+    transition: all .2s ease-out;
 }
-
 html {
-    background-color: #e5e5e5;
+    background-color: #1a1c20;
     color: #333;
     font-family: 'Montserrat', 'sans-serif';
     font-size: 20px;
     font-weight: 400;
     text-rendering: optimizeLegibility;
 }
-
-.row {
-    background-color: aqua;
-    max-width: 1140px;
-    margin: 0 auto;
+.icon{
+    max-width: 40px;
+    float: left;
+}
+@media only screen and (max-width:700px) and (orientation:portrait){
+    .icon{
+        display: none;
+    }
 }
 
-header {
-
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
-.project-name {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-h1 {
-    margin: 0;
-    font-size: 400%;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    border: solid #333 1px;
-    border-radius: 200px;
-    text-decoration: none;
+a {
     color: #333;
 }
 
-.btn-full {
-    background-color: #e5e5e5;
-    border: 1px solid #333;
+#header{
+    position:fixed;
+    top: 0;
+    height:3.5em ;
+    width:100%;
+    z-index:3;
+    transition: max-height 0.5s ease-out;
+}
+#header .menu-btn{
+    display:none;
+}
+#header ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    background-color:#fff;
 }
 
-.btn-ghost {
-    border: 1px solid #333;
-    background-color: cornflowerblue;
+#header ul a{
+    display:block;
+    padding:20px;
+    text-decoration:none;
+}
+
+#header ul a:hover{
+   background-color: #e0e7e9;
+   color:#fff;
+}
+
+#header #navMenu li{
+    width: 100%;
+    height: 14.285%;
+    display: block;
+    float:left;
+}
+#header li a{
+    position: relative;
+    height: 100%;
+    display: block;
+    padding:20px 30px;
+
+}
+.options{
+    position: absolute;
+    top: 37%;
+    left: 30%;
+}
+.logo{
+    color: #fff;
+    text-decoration: none;
+    float:left;
+    display:block;
+    font-size:2em;
+    padding:10px 20px;
+}
+#header #navMenu{
+    border-top-left-radius:5px ;
+    border-bottom-left-radius:5px ;
+    border-left:5px solid #808080 ;
+    box-shadow: 0px 0px 10px 4px rgb(0,0,0,.9);
+    position: fixed;
+    top: 0px;
+    right:-230px;
+    height: 100%;
+    width: 300px;
+    float: right;
+    transition: right 0.8s ease-out;
+}
+.icon {
+    position: absolute;
+    top: 27%;
+    left: 5%;
+}
+
+@media only screen and (max-width:700px) and (orientation:portrait){
+    #logoDiv{
+        display: none;
+    }
+    .desktop{
+        display: none;
+    }
+    #header{
+        border-bottom:5px solid #808080 ;
+        box-shadow: 0px 0px 10px 4px rgb(0,0,0,.9);
+        background-color: #fff;
+        height: 3.5em;
+        
+    }
+    .logo{
+        color: #000;
+        max-height: 100%;
+        height: fit-content;
+        float:left;
+        display:block;
+        font-size:2em;
+        padding:10px 20px;
+        text-decoration: none;
+    }
+    .logo p{
+        font-size: 80%;
+    }
+    /*-nav btn animation-*/
+    #header .menu-icon{
+        padding: 28px 20px;
+        position:relative;
+        float:right;
+        cursor: pointer;
+    }
+    
+    #header .menu-icon .nav-icon{
+        float: right;
+        background:#333;
+        display:block;
+        height:2px;
+        width:18px;
+        position:relative;
+        transition:background .2s ease-out;
+    }
+    
+    #header .menu-icon .nav-icon:before{
+        background:#333;
+        content:"";
+        display:block;
+        height:100%;
+        width:100%;
+        position:absolute;
+        transition:all .2s ease-out;
+        top:5px;  
+    
+    }
+    
+    #header .menu-icon .nav-icon:after{
+        background:#333;
+        content:"";
+        display:block;
+        height:100%;
+        width:100%;
+        position:absolute;
+        transition:all .2s ease-out;
+        top:-5px;  
+    
+    }
+    
+    #header .menu-btn{
+        display:none;
+    }
+    
+    #header .menu-btn:checked ~ #navMenu{
+        height:100%;
+        background-color:#808080;
+        transition-duration: 0.2s, 0.2s;
+    }
+    #header .menu-btn:checked ~ #header{
+        height:100%;
+    }
+    
+    #header .menu-btn:checked ~ .menu-icon .nav-icon{
+        background:transparent;
+    }
+    #header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+        transform: rotate(-45deg);
+        background: #fff;
+        top:0;
+    }
+    #header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+        transform: rotate(45deg);
+        background: #fff;
+        top:0;
+    }
+    /*nav bar*/
+    #header #navMenu{
+        position: relative;
+        right: 0;
+        left: 0;
+        box-shadow: 0 0 0 0 rgba(0,0,0);
+        background-color: #fff;
+        width: 100%;
+        height: 0;
+       transition-property: height, background-color;
+       transition-duration: 0.5s, 0.8s;
+       transition-timing-function: ease-out;
+    }
+    
+    #header #navMenu li{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        display: block;
+    }
+    #header li a{
+        display: block;
+        padding:20px 30px;
+    }
+    #header ul a{
+        color: #fff;
+        display:block;
+        padding:20px;
+        border-right:0px solid #aaa;
+        text-decoration:none;
+    }
+    #header ul a:hover{ 
+        color:rgba(0,0,0);
+     }
+    .options{
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+}
+.dashboard, .timer, .plan, .stats, .flash, .todo {
+    display: block;
+    margin: 13vh 6vw 0 6vw;
+    height: 80vh;
+    width: 80vw;
+    background-color: #1e2025;
+    border-radius: 1rem;
+    padding: 30px;
+    -webkit-box-shadow: 0px -1px 23px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 23px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 23px -3px rgba(0,0,0,0.75);
+}
+
+
+@media only screen and (max-width:700px) and (orientation:landscape){
+    #header ul a{
+        color: rgb(17, 134, 230);
+    }
+    #header ul a:hover{ 
+        background-color: rgba(0, 0, 0, 0);
+        color: rgb(17,134,230);
+     }
+     #logoDiv{
+        display: none;
+    }
+}
+.licon{
+    width: 30px;
+}
+#logoMenu li a{
+    position: absolute;
+}
+#logocheck{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 10px rgba(0,0,0,0.75);
+}
+.logo-icon{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+#logo-btn{
+    display: none;
+}
+/*---this is temporily solving of a bug*/
+#a1{
+    transform-origin: center;
+    transform: rotate(-0deg);
+    top: -20%;
+    left: -40%;
+}
+#a2{
+    transform-origin: center;
+    transform: rotate(-60deg);
+    top: -13%;
+    left: -60%;
+}
+#a3{
+    transform-origin: center;
+    transform: rotate(-120deg);
+    top: 15%;
+    left: -60%;
+}
+#a4{
+    transform-origin: center;
+    transform: rotate(-180deg);
+    top: 20%;
+    left: -40%;
+}
+#a5{
+    transform-origin: center;
+    transform: rotate(-240deg);
+    top: 8%;
+    left: -20%;
+}
+#a6{
+    transform-origin: center;
+    transform: rotate(-300deg);
+    top: -10%;
+    left: -20%;
+}
+/*---this is temporily solving of a bug end*/
+#logoDiv{
+    position: fixed;
+    top: 70px;
+    left: 70px;
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+    background-color:#fff;
+}
+#logoMenu li{
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(17, 134, 230);
+    z-index: -1;
+}
+#logo{
+    z-index: 1;
+}
+#logo-btn:checked~ #logoMenu li{
+    transform-origin:105px 105px ;
+    top: -30px;
+    left: -30px;
+}
+
+#logo-btn:checked~#logoMenu li:nth-child(1){
+    transform: rotate(0deg);
+}
+#logo-btn:checked~#logoMenu li:nth-child(2){
+    transform: rotate(60deg);
+
+}
+#logo-btn:checked~#logoMenu li:nth-child(3){
+    
+    transform: rotate(120deg);
+}
+#logo-btn:checked~#logoMenu li:nth-child(4){
+    
+    transform: rotate(180deg);
+}
+#logo-btn:checked~#logoMenu li:nth-child(5){
+   
+    transform: rotate(240deg);
+}
+#logo-btn:checked~#logoMenu li:nth-child(6){
+    
+    transform: rotate(300deg);
+}
+#logoMenu li a:hover{
+    background-color: transparent;
+    border-radius: 50%;
+}
+#logoMenu li:hover{
+    background-color:rgb(17, 134, 230,0.5);
 }
